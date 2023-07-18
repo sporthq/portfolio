@@ -28,15 +28,15 @@ const about = () => {
 						<div className='col-span-3 flex-col items-start justify-start   '>
 							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>About Me</h2>
 							<p className='font-medium'>
-								I've been programming for nearly 2 years and I'm extremely passionate about this field.My main interests
+								I&apos;ve been programming for nearly 2 years and I&apos;m extremely passionate about this field.My main interests
 								revolve around MERN technologies (MongoDB, Express.js, React.js, Node.js), which I actively work with in
-								my daily job. Over this time, I've gained a solid foundation in these technologies and I'm constantly
+								my daily job. Over this time, I&apos;ve gained a solid foundation in these technologies and I&apos;m constantly
 								expanding my knowledge
 							</p>
 							<p className='my-4 font-medium'>
 								My main goal is to continuously grow my knowledge and programming skills. I aim to further specialize in
 								the MERN stack and explore new technologies that enable me to build innovative solutions. Additionally,
-								I'd like to actively engage with the programming community, share knowledge, and collaborate with fellow
+								I&apos;d like to actively engage with the programming community, share knowledge, and collaborate with fellow
 								technology enthusiasts.
 							</p>
 						</div>
