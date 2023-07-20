@@ -36,7 +36,13 @@ export default function Home() {
 					<div className='flex items-center justify-center w-full   '>
 						<Link className='font-semibold flex items-center bg-dark  text-light p-2.5 px-6 rounded-lg text-lg   duration-300   border-2 border-solid border-transparent hover:border-dark group' href='/projects'> Projects <VscArrowRight className="group-hover:translate-x-1 ml-1 duration-300" /></Link>
 						<motion.div initial={{y:200, opacity:0}} animate={{y:0, opacity:1}} exit={{y:200}} transition={{duration: 1, easy:'easyInOut'}} className=''>
-							<Image src={profilePic} alt='Developer while work' className='w-full h-auto overflow-hidden ' />
+							<Image src={profilePic} alt='Developer while work' className='w-full h-auto overflow-hidden ' priority 
+							sizes='
+							(max-width: 768px) 100vw,
+							(max-width: 1200px) 50vw,
+							50vw
+							'
+							/>
 						</motion.div>
 						<Link className='z-100 flex items-center text-xl font-medium   text-dark underline decoration-primary hover:translate-y-1 duration-300' href='mailto:nowak.sebastian99@wp.pl'><MailIcon  className=' mr-2 w-8' />   Write to me! </Link>
 					</div>
