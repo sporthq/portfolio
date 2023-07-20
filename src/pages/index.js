@@ -57,7 +57,7 @@ export default function Home() {
 							<Image
 								src={profilePic}
 								alt='Developer while work'
-								className='w-full h-auto overflow-hidden lg:min-w-[300px]'
+								className='w-full h-auto overflow-hidden lg:max-w-[300px]'
 								priority
 							// 	sizes='
 							// (max-width: 768px) 100vw,

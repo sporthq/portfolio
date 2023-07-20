@@ -56,7 +56,7 @@ const projects = () => {
 			<main className='w-full mb-16 flex flex-col items-center justify-center'>
 				<Layout className='' />
 				<AnimatedText
-					className='text-8xl  lg:text-7xl text-center font-semibold mb-24 py-16'
+					className='text-8xl  lg:text-4xl text-center font-semibold mb-24 py-16'
 					text='Discover my projects!'
 					fromBottom
 				/>
