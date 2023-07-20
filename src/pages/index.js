@@ -20,7 +20,7 @@ export default function Home() {
 				<Layout className='pt-8 items-center justify-center w-full'>
 					<div className='text-center w-full  flex  flex-col items-center mb-32overflow-auto mb-4 relative'>
 						<h1 className='text-8xl font-semibold  py-2 relative inline-block'>
-							Hello!
+							Cześć!
 							<motion.span initial={{ width: 0 }} animate={{width: '100%'}} transition={{duration: 3}} className='absolute bottom-0 left-0 w-0 h-[4px] bg-gradient-to-l from-primary to-white rounded-full'></motion.span>
 						</h1>
 					
