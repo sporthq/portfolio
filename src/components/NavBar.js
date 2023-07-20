@@ -63,7 +63,7 @@ const NavBar = () => {
 					</nav>
 				</div>
 
-				<nav className=' flex items-center justify-center flex-wrap  lg:absolute lg:items-baseline lg:right-[10%] lg:top-[50%] -translate-y-[50%] xs:flex-col xs:right-[10%]   xs:mt-2'>
+				<nav className=' flex items-center justify-center flex-wrap  lg:absolute lg:items-baseline lg:right-[10%] lg:top-[50%] -translate-y-[50%] xs:flex-col xs:right-[10%]   xs:mt-2 xs:items-center'>
 					<motion.a
 						href='https://twitter.com/Seba1_01'
 						target={'_blank'}
@@ -89,7 +89,7 @@ const NavBar = () => {
 						whileHover={{ y: -2 }}
 						whileTap={{ scale: 0.9 }}
 					>
-						<FaceBookIcon />
+						<FaceBookIcon className='' />
 					</motion.a>
 				</nav>
 			</header>
