@@ -8,7 +8,44 @@ import Link from 'next/link';
 import { LinkArrow, MailIcon } from '@/components/Icons';
 import ParticlesContainer from '@/components/ParticlesContainer';
 import { VscArrowRight } from 'react-icons/vsc';
+import {useState, useEffect} from 'react'
 export default function Home() {
+
+	const [responsiveWidth, setResponsiveWidth] = useState(0);
+	const [profileImgHeight, setProfilImageHeight] = useState(0);
+	console.log(profileImgHeight)
+console.log(responsiveWidth)
+	useEffect(() => {
+		const updateElementSize = () => {
+			const windowHeight = window.innerHeight;
+	  
+			if (windowHeight > 780) {
+			  setResponsiveWidth(400);
+				setProfilImageHeight(24)
+			}
+
+			else if (windowHeight < 770) {
+				setProfilImageHeight(20)
+			}
+		
+			else if(windowHeight < 780) {
+			  // Ustaw inny rozmiar dla mniejszych wysokości ekranu, jeśli to konieczne
+			  setResponsiveWidth(300);
+			}
+
+			
+		
+		  };
+	  
+		  // Wywołaj funkcję aktualizującą szerokość elementu zaraz po załadowaniu strony i przy każdej zmianie rozmiaru okna
+		  updateElementSize();
+		  window.addEventListener('resize', updateElementSize);
+	  
+		  return () => {
+			window.removeEventListener('resize', updateElementSize);
+		  };
+		}, []);
+
 	return (
 		<>
 			<Head>
@@ -18,9 +55,9 @@ export default function Home() {
 					content='Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more. '
 				/>
 			</Head>
-			<div className='flex items-center  text-dark w-full max-h-screen   '>
-				<Layout className='pt-8 items-center justify-center w-full'>
-					<div className='text-center w-full  flex  flex-col items-center mb-32overflow-auto mb-4 relative'>
+			<div className='flex   text-dark w-full  min-h-screen items-start lg:items-center  sm:items-start justify-center relative  '>
+				<Layout className='pt-8 items-center justify-center w-full' >
+					<div className='text-center w-full  flex  flex-col items-center relative  xs:pb-56 sm:pb-42 '>
 						<h1 className='text-8xl font-semibold  py-2 relative inline-block lg:text-7xl'>
 							Hello!
 							<motion.span
@@ -32,14 +69,14 @@ export default function Home() {
 						</h1>
 
 						<ParticlesContainer />
-						<div className='flex flex-col items-center self-center '>
+						<div className='flex flex-col items-center self-center  mb-32'>
 							<AnimatedText
 								className='text-3xl max-w-4xl mt-12 mb-4  md:text-xl lg:text-2xl md:px-2'
 								text='As a full-stack developer with a passion for creating innovative web applications, I use MERN technologies (MongoDB, Express.js, React.js, Node.js) to deliver high-quality and responsive websites.'
 							/>
 						</div>
 					</div>
-					<div className='flex items-center justify-center w-full   '>
+					<div className='flex items-center justify-center w-full  absolute bottom-0 left-1/2 -translate-x-1/2 overflow-hidden  '>
 						<Link
 							className='font-semibold  items-center bg-dark  text-light p-2.5 px-6 rounded-lg text-lg   duration-300   border-2 border-solid border-transparent hover:border-dark group lg:hidden flex'
 							href='/projects'
@@ -50,19 +87,24 @@ export default function Home() {
 						<motion.div
 							initial={{ y: 200, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
+							
 							exit={{ y: 200 }}
 							transition={{ duration: 1, easy: 'easyInOut' }}
 							className=''
 						>
 							<Image
 								src={profilePic}
+								// style={{
+									
+								// 	width: `${profileImgHeight}vw`,
+								//   }}
 								alt='Developer while work'
-								className='w-full h-auto overflow-hidden lg:max-w-[300px]'
+								className={`   h-auto overflow-hidden w-[${profileImgHeight}vw]  lg:hidden  sm:max-w-[${responsiveWidth}px] flex  sm:flex xs:w-[70vw] `}
 								priority
 							// 	sizes='
-							// (max-width: 768px) 100vw,
+							// (max-width: 768px) 4vw,
 							// (max-width: 1200px) 100vw,
-							// 100vw
+							// 10vw
 							// '
 							/>
 						</motion.div>

@@ -16,11 +16,11 @@ export default function App({ Component, pageProps }) {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className={`${montserrat.className} bg-light w-full min-h-screen`}   >
-				<NavBar></NavBar>
+			<main className={`${montserrat.className} bg-light w-full min-h-screen `}   >
+				<NavBar className='order-1'></NavBar>
 				<Component {...pageProps} />
 				{/* <footer className="border border-t-4 p-3 text-center"><p>Contact with me!</p></footer> */}
-				<Footer />
+				<Footer className='order-3 mb-auto' />
 <FacebookMsg />
 			</main>
 		</>
