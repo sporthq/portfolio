@@ -4,6 +4,9 @@ import Logo from './Logo';
 import { useRouter } from 'next/router';
 import { TwitterIcon, FaceBookIcon, GithubIcon } from './Icons';
 import { motion } from 'framer-motion';
+import {  MailIcon } from '@/components/Icons';
+import Flag from 'react-world-flags'
+
 const CustomLink = ({ href, title, className = '' }) => {
 	const router = useRouter();
 	
@@ -20,7 +23,7 @@ const CustomLink = ({ href, title, className = '' }) => {
 		</Link>
 	);
 };
-const CustomMobileLink = ({ href, title, className = '', toggle }) => {
+const CustomMobileLink = ({ href, title, className = '', toggle, icon  }) => {
 	const router = useRouter();
 
 	function handleClick(){
@@ -32,7 +35,7 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 	
 	return (
 		<button onClick={handleClick} href={href} className={`${className} relative group my-2`}>
-			{title}
+			<p className='flex items-center py-0'><span className='mr-2'>{icon}</span>{title}</p>
 			<span
 				className={`h-[1px]  inline-block  bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] easy duration-300 ${
 					router.asPath === href ? 'w-full' : 'w-0'
@@ -73,12 +76,46 @@ const NavBar = () => {
 						} `}
 					></span>
 				</button>
-				{isOpen && <div className='min-w-[70vw]  flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 rounded-lg backdrop-blur-md py-32 text-light '>
-					<nav className='flex flex-col items-center jusitify-center'>
+				{isOpen && <div className='min-w-[70vw]  flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 rounded-lg backdrop-blur-md py-32 text-light  '>
+					<Link href='mailto:nowak.sebastian99@wp.pl'><button className='absolute right-[15px] bottom-[15px] flex justify-center items-center text-base'>Send <MailIcon className='w-4 mx-2'/> to me!</button></Link>
+					<nav className='flex flex-col items-center jusitify-center '>
 						<CustomMobileLink href='/' title='Home' className=' 'toggle={handleClick} />
 						<CustomMobileLink href='/about' title='About' className='' toggle={handleClick}/>
 						
 						 <CustomMobileLink href='/projects' title='Projects' className=' ' toggle={handleClick}/>
+						 
+						 <nav className=' flex items-center justify-center mt-6 shadow-xl  		  '>
+					<motion.a
+						href='https://twitter.com/Seba1_01'
+						target={'_blank'}
+						className='w-7 mr-3   '
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.9 }}
+					>
+						<TwitterIcon className=''></TwitterIcon>
+					</motion.a>
+					<motion.a
+						href='https://github.com/sporthq'
+						className='w-7 mx-3 '
+						target={'_blank'}
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.9 }}
+					>
+						<GithubIcon />
+					</motion.a>
+					<motion.a
+						href='https://www.facebook.com/sebastian.nowak.75'
+						className='w-8 ml-3 '
+						target={'_blank'}
+						whileHover={{ y: -2 }}
+						whileTap={{ scale: 0.9 }}
+					>
+						<FaceBookIcon className='' />
+					</motion.a>
+				</nav>
+
+						
+						
 
 					</nav>
 				</div>}
@@ -96,7 +133,8 @@ const NavBar = () => {
 				</div>
 
 				<nav className=' flex items-center justify-center flex-wrap  lg:absolute lg:items-baseline lg:right-[10%] lg:top-[50%] -translate-y-[50%] xs:flex-col xs:right-[10%]   xs:mt-2 xs:items-center'>
-					<motion.a
+				<button><Flag className='w-10 mb-4 xs:w-8' code="pl" /></button>
+					{/* <motion.a
 						href='https://twitter.com/Seba1_01'
 						target={'_blank'}
 						className='w-6 mr-3  my-1  xs:mr-0'
@@ -121,9 +159,12 @@ const NavBar = () => {
 						whileHover={{ y: -2 }}
 						whileTap={{ scale: 0.9 }}
 					>
-						<FaceBookIcon className='' />
-					</motion.a>
+						<FaceBookIcon className='' /> 
+					</motion.a> */}
+			
 				</nav>
+		
+				
 			</header>
 		</>
 	);

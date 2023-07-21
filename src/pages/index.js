@@ -5,47 +5,49 @@ import profilePic from '../../public/images/profile/developer-pic2.png';
 import AnimatedText from '@/components/AnimatedText';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { LinkArrow, MailIcon } from '@/components/Icons';
+import {  MailIcon } from '@/components/Icons';
 import ParticlesContainer from '@/components/ParticlesContainer';
 import { VscArrowRight } from 'react-icons/vsc';
 import {useState, useEffect} from 'react'
 export default function Home() {
-
 	const [responsiveWidth, setResponsiveWidth] = useState(0);
-	const [profileImgHeight, setProfilImageHeight] = useState(0);
-	console.log(profileImgHeight)
-console.log(responsiveWidth)
+	const [profileImgHeight, setProfilImageHeight] = useState('');
 	useEffect(() => {
 		const updateElementSize = () => {
-			const windowHeight = window.innerHeight;
+		  const windowHeight = window.innerHeight;
+		  const windowWidth = window.innerWidth;
+		  let newHeight;
 	  
-			if (windowHeight > 780) {
-			  setResponsiveWidth(400);
-				setProfilImageHeight(24)
-			}
-
-			else if (windowHeight < 770) {
-				setProfilImageHeight(20)
-			}
-		
-			else if(windowHeight < 780) {
-			  // Ustaw inny rozmiar dla mniejszych wysokości ekranu, jeśli to konieczne
-			  setResponsiveWidth(300);
-			}
-
-			
-		
-		  };
+		  if (windowWidth < 479 && windowHeight < 813) {
+			newHeight = 80;
+		  } else if (windowHeight < 690) {
+			newHeight = 17;
+		  } else if (windowHeight < 730) {
+			newHeight = 20;
+		  } else if (windowHeight < 780) {
+			newHeight = 28;
+		  } else if (windowHeight < 880) {
+			newHeight = 23;
+		  } else if (windowHeight < 900) {
+			newHeight = 24;
+		  } else {
+			// Domyślna wartość, gdy nie spełniono żadnego warunku
+			newHeight = 27; // Możesz ustawić tutaj dowolną wartość jako domyślną
+		  }
 	  
-		  // Wywołaj funkcję aktualizującą szerokość elementu zaraz po załadowaniu strony i przy każdej zmianie rozmiaru okna
-		  updateElementSize();
-		  window.addEventListener('resize', updateElementSize);
+		  setProfilImageHeight(newHeight);
+		};
 	  
-		  return () => {
-			window.removeEventListener('resize', updateElementSize);
-		  };
-		}, []);
-
+		// Wywołaj funkcję aktualizującą szerokość elementu zaraz po załadowaniu strony i przy każdej zmianie rozmiaru okna
+		updateElementSize();
+		window.addEventListener('resize', updateElementSize);
+	  
+		return () => {
+		  // Usuń poprzedniego słuchacza przed dodaniem nowego
+		  window.removeEventListener('resize', updateElementSize);
+		};
+	  }, []);
+	
 	return (
 		<>
 			<Head>
@@ -91,26 +93,22 @@ console.log(responsiveWidth)
 							exit={{ y: 200 }}
 							transition={{ duration: 1, easy: 'easyInOut' }}
 							className=''
+														style={{ 
+															
+															width: `${profileImgHeight}vw` }}
 						>
 							<Image
 								src={profilePic}
-								// style={{
-									
-								// 	width: `${profileImgHeight}vw`,
-								//   }}
+							
 								alt='Developer while work'
-								className={`   h-auto overflow-hidden w-[${profileImgHeight}vw]  lg:hidden  sm:max-w-[${responsiveWidth}px] flex  sm:flex xs:w-[70vw] `}
+								className={` lg:hidden w-[100%]  flex  xs:flex xs:w-[90vw] `}
 								priority
-							// 	sizes='
-							// (max-width: 768px) 4vw,
-							// (max-width: 1200px) 100vw,
-							// 10vw
-							// '
+						
 							/>
 						</motion.div>
 						<div className='lg:hidden'>
 							<Link
-								className=' flex items-center text-xl font-medium   text-dark underline decoration-primary hover:translate-y-1 duration-300'
+								className=' flex items-center text-xl font-medium   text-dark underline decoration-primary hover:translate-y-1 duration-300 '
 								href='mailto:nowak.sebastian99@wp.pl  '
 							>
 								<MailIcon className=' mr-2 w-8' /> Write to me!{' '}
