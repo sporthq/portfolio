@@ -18,7 +18,7 @@ export default function Home() {
 		  const windowWidth = window.innerWidth;
 		  let newHeight;
 	  
-		  if (windowWidth < 479 && windowHeight < 813) {
+		  if (windowWidth < 479 && windowHeight < 1000) {
 			newHeight = 80;
 		  } else if (windowHeight < 690) {
 			newHeight = 17;
@@ -27,7 +27,7 @@ export default function Home() {
 		  } else if (windowHeight < 780) {
 			newHeight = 28;
 		  } else if (windowHeight < 880) {
-			newHeight = 23;
+			newHeight = 26;
 		  } else if (windowHeight < 900) {
 			newHeight = 24;
 		  } else {
@@ -57,7 +57,7 @@ export default function Home() {
 					content='Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more. '
 				/>
 			</Head>
-			<div className='flex   text-dark w-full  min-h-screen items-start lg:items-center  sm:items-start justify-center relative  '>
+			<div className='flex   text-dark w-full  min-h-screen items-start lg:items-center  xs:items-start justify-center relative  '>
 				<Layout className='pt-8 items-center justify-center w-full' >
 					<div className='text-center w-full  flex  flex-col items-center relative  xs:pb-56 sm:pb-42 '>
 						<h1 className='text-8xl font-semibold  py-2 relative inline-block lg:text-7xl'>
