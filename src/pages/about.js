@@ -34,7 +34,7 @@ const about = () => {
 				/>
 			</Head>
 			<main className='flex w-full flex-col items-center justify-center '>
-			<Layout className='py-16 px-16 md:py-8 md:px-4 '>
+			<Layout className='py-16 px-14 md:py-8 md:px-4 '>
 					<AnimatedText
 						className={`text-8xl text-center font-semibold mb-32 2xl:text-7xl  lg:text-6xl sm:text-5xl   md:mb-16`}
 						text="Hi there! I'm Sebastian. Welcome to my portfolio page."
@@ -64,36 +64,34 @@ const about = () => {
 									alt='Sebastian Nowak'
 									className=' w-auto max-h-[500px] self:center  lg:h-auto object-contain  border-2 border-solid border-dark  rounded-2xl md:min-h-[280px] '
 									priority
-									sizes='
-							(max-width: 768px) 100vw,
-							(max-width: 1200px) 50vw,
-							50vw
-							'
+							
 								/>
 							</div>
 						</div>
-						<div className='col-span-3 flex-col  2xl:order-1  md:order-2'>
+						<div className='w-full col-span-3 flex flex-col items-center justify-center  2xl:order-1  md:order-2 md:mt-8'>
+							<div>
 							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Technology</h2>
-							<div className='w-full flex'>
-								<IconHtml5 className='w-16 mr-1 hover:animate-bounceicon  duration-300' />
-								<CSSIcon className='w-16 mx-1 hover:animate-bounceicon duration-300' />
-								<JSIcon className='w-16 ml-1 hover:animate-bounceicon duration-300' />
-								<ReactIcon className='w-16 mx-1  hover:animate-bounceicon duration-300' />
-								<NextIcon className='w-16 mx-1  hover:animate-bounceicon duration-300' />
+							<div className='w-full flex mt-4'>
+								<IconHtml5 className='w-16 xs:w-12 mr-1 hover:animate-bounceicon  duration-300' />
+								<CSSIcon className='w-16 mx-1 xs:w-12  hover:animate-bounceicon duration-300' />
+								<JSIcon className='w-16 ml-1 xs:w-12  hover:animate-bounceicon duration-300' />
+								<ReactIcon className='w-16 mx-1 xs:w-12   hover:animate-bounceicon duration-300' />
+								<NextIcon className='w-16 mx-1  xs:w-12  hover:animate-bounceicon duration-300' />
 							</div>
 							<div className='w-full flex mt-4'>
-								<NodeIcon className='w-16 mr-1  hover:animate-bounceicon duration-300' />
-								<MongoDBIcon className='w-16 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<ExpressIcon className='w-16 mx-1  hover:animate-bounceicon duration-300' />
-								<TailwindIcon className='w-16 mx-1  hover:animate-bounceicon duration-300' />
-								<BootstrapIcon className='w-16 ml-1  hover:animate-bounceicon duration-300' />
+								<NodeIcon className='w-16 mr-1  xs:w-12  hover:animate-bounceicon duration-300' />
+								<MongoDBIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								<ExpressIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
+								<TailwindIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
+								<BootstrapIcon className='w-16 xs:w-12  ml-1  hover:animate-bounceicon duration-300' />
 							</div>
 							<div className='w-full flex mt-4'>
-								<ReduxIcon className='w-16 mr-1  hover:animate-bounceicon duration-300' />
-								<RouterIcon className='w-16 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<FrameMotionIcon className='w-16 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<IconChakraui className='w-16 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<GitHubIcon className='w-16 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								<ReduxIcon className='w-16 xs:w-12  mr-1  hover:animate-bounceicon duration-300' />
+								<RouterIcon className='w-16  xs:w-12 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								<FrameMotionIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								<IconChakraui className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								<GitHubIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+							</div>
 							</div>
 						</div>
 					</div>
