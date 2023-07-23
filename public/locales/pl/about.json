@@ -8,7 +8,14 @@
     "education": "Edukacja",
     "send": "Wyślij",
     "tome": "do mnie!",
-    "hello": "Cześć!"
+    "Hello": "Cześć!",
+    "writetome" : "Napisz do mnie!",
+    "helloHome": "Jako programista full-stack z pasją  tworzę innowacyjne aplikacje internetowe, wykorzystuję technologie MERN (MongoDB, Express.js, React.js, Node.js), aby dostarczać wysokiej jakości projekty.",
+    "contentHome": "Witaj na mojej stronie portfolio, na której znajdziesz  moje projektów z zakresu tworzenia stron internetowych. Odkryj moje umiejętności w tworzeniu stron internetowych. ",
+    "maintekstproject":"Zobacz moje projekty!",
+    "visitproject": "Zobacz projekt"
+
+
 
 
 

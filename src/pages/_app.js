@@ -4,7 +4,9 @@ import { Montserrat } from 'next/font/google';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import FacebookMsg from '@/components/FacebookMsg';
-import { appWithTranslation } from 'next-i18next';
+import { appWithTranslation, useTranslation } from 'next-i18next';
+
+
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -29,5 +31,6 @@ function App({ Component, pageProps }) {
 	);
 }
 
+  
 
 export default appWithTranslation(App);

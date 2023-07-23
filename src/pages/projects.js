@@ -10,23 +10,22 @@ import projectBankist from '../../public/images/projects/bankist-removebg.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GitHubIcon } from '@/components/Icons';
-const projects = () => {
+
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+const Projects = () => {
+	const { t } = useTranslation('about');
+
 	function WebProject({ image, alt, hrefToPage, gitLink }) {
 		return (
 			<div className='col-span-2 md:col-start-2 md:col-end-4 w-full  flex justify-center translate-x-3'>
 				<div className='relative rounded-2xl  flex items-center jusify-center group '>
 					<div className='flex items-center justify-center relative flex-col  '>
-						<Image
-							priority
-							
-							className=''
-							src={image}
-							alt={alt}
-						/>
+						<Image priority className='' src={image} alt={alt} />
 						<div className='absolute w-[80%] h-[50px] left-[45%] -translate-x-[55%] top-0  bg-transparent -translate-y-[92%] opacity-0 md:opacity-100   group-hover:bg-transparent  group-hover:opacity-90 transition-all duration-600 rounded-2xl mb-[300px] '>
 							<div className=' flex items-center justify-around text-dark font-bold '>
 								<Link className='text-xl ml-4' href={hrefToPage} target='_blank'>
-									<span className='hover:underline duration-300 sm:text-lg xs:text-base'>Visit Project</span>
+									<span className='hover:underline duration-300 sm:text-lg xs:text-base'>{t('visitproject')}</span>
 								</Link>
 								<Link className='text-xl ' href={gitLink} target='_blank'>
 									<span>
@@ -55,57 +54,59 @@ const projects = () => {
 				<Layout className='' />
 				<AnimatedText
 					className='text-8xl 2xl:text-7xl  lg:text-6xl sm:text-5xl   md:mb-16 xs:mb-14 text-center font-semibold mb-24 py-16'
-					text='Discover my projects!'
+					text={t('maintekstproject')}
 					fromBottom
 				/>
 
 				<div className='mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center'>
-					
-						<WebProject
-							image={projectCasting}
-							alt='Casting project page'
-							hrefToPage='https://casting-appv1.onrender.com/'
-							gitLink='https://github.com/sporthq/castingmern'
-						/>
-					
-
-				
-						<WebProject
-							image={projectForest}
-							alt='Forest project page'
-							hrefToPage='https://sporthq.github.io/forest/'
-							gitLink='https://github.com/sporthq/forest'
-						/>
-					
-					
-						<WebProject
-							image={projectMapty}
-							alt='Mapty project page'
-							hrefToPage='https://mapty-tbq2.onrender.com/'
-							gitLink='https://github.com/sporthq/mapty'
-						
+					<WebProject
+						image={projectCasting}
+						alt='Casting project page'
+						hrefToPage='https://casting-appv1.onrender.com/'
+						gitLink='https://github.com/sporthq/castingmern'
 					/>
-					
-						<WebProject
-							image={projectForkify}
-							alt='Forkify project page'
-							hrefToPage='https://forkify-sporthq.netlify.app/'
-							gitLink='https://github.com/sporthq/forkify'
-						/>
-				
-			<div className=" col-start-2 col-end-4 ">
+
+					<WebProject
+						image={projectForest}
+						alt='Forest project page'
+						hrefToPage='https://sporthq.github.io/forest/'
+						gitLink='https://github.com/sporthq/forest'
+					/>
+
+					<WebProject
+						image={projectMapty}
+						alt='Mapty project page'
+						hrefToPage='https://mapty-tbq2.onrender.com/'
+						gitLink='https://github.com/sporthq/mapty'
+					/>
+
+					<WebProject
+						image={projectForkify}
+						alt='Forkify project page'
+						hrefToPage='https://forkify-sporthq.netlify.app/'
+						gitLink='https://github.com/sporthq/forkify'
+					/>
+
+					<div className=' col-start-2 col-end-4 '>
 						<WebProject
 							image={projectBankist}
 							alt='Strona projektu Bankist'
 							hrefToPage='https://bankist-71x0.onrender.com/'
 							gitLink='https://github.com/sporthq/bankist'
 						/>
-				</div>
-					
+					</div>
 				</div>
 			</main>
 		</>
 	);
 };
 
-export default projects;
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['about'])),
+		},
+	};
+}
+
+export default Projects;

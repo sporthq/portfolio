@@ -8,8 +8,12 @@
     "education": "Education",
     "send": "Send",
     "tome": "to me!",
-    "hello": "Hello!"
-
+    "Hello": "Hello!",
+    "writetome" : "Write to me!",
+    "helloHome": "As a full-stack developer with a passion for creating innovative web applications, I use MERN technologies (MongoDB, Express.js, React.js, Node.js) to deliver high-quality and responsive websites.",
+    "contentHome": "Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more.",
+    "maintekstproject":"Discover my projects!",
+    "visitproject": "Visit Project"
 
   }
   

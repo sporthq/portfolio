@@ -153,7 +153,7 @@ const Education = () => {
 
 	return (
 		<>
-			<h2 className='text-8xl text-center py-36 lg:text-6xl  sm:text-5xl   lg:py-28 xd:py-8 font-semibold'>{t('education')}</h2>
+			<h2 className='text-8xl text-center py-36 lg:text-6xl  sm:text-5xl   lg:py-28 xd:py-8 font-semibold'>{t("education")}</h2>
 
 			<div ref={ref} className='relative grid grid-cols-9 gap-6 md:gap-4 md:grid-cols-6  mb-16 '>
 				<motion.div

@@ -10,12 +10,15 @@ import ParticlesContainer from '@/components/ParticlesContainer';
 import { VscArrowRight } from 'react-icons/vsc';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+
 
 export default function Home() {
 	const { t } = useTranslation('about');
 
+	
 	const { locale } = useRouter();
 	const [profileImgHeight, setProfilImageHeight] = useState('');
 
@@ -59,30 +62,32 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Sebastian Nowak || Portfolio</title>
-				<meta
-					name='description'
-					content='Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more. '
-				/>
+				<meta name='description' content="Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more." />
 			</Head>
 			<div className='flex   text-dark w-full  min-h-screen items-start lg:items-center  xs:items-start justify-center relative  '>
 				<Layout className='pt-8 items-center justify-center w-full'>
 					<div className='text-center w-full  flex  flex-col items-center relative  xs:pb-56 sm:pb-42 '>
-						<h1 className='text-8xl font-semibold  py-2 relative inline-block lg:text-7xl'>
-							{t('hello')}
+						<h1 className='text-8xl font-semibold py-2 relative inline-block lg:text-7xl'>
+							{t("Hello")}
 							<motion.span
+								
 								initial={{ width: 0 }}
 								animate={{ width: '100%' }}
 								transition={{ duration: 3 }}
 								className='absolute bottom-0 left-0 w-0 h-[4px] bg-gradient-to-l from-primary to-white rounded-full'
-							></motion.span>
+							/>
 						</h1>
 
 						<ParticlesContainer />
 						<div className='flex flex-col items-center self-center  mb-32'>
 							<AnimatedText
 								className='text-3xl max-w-4xl mt-12 mb-4  md:text-xl lg:text-2xl md:px-2'
-								text='As a full-stack developer with a passion for creating innovative web applications, I use MERN technologies (MongoDB, Express.js, React.js, Node.js) to deliver high-quality and responsive websites.'
-							/>
+						text={t('helloHome')}
+
+							/>	
+							
+						
+
 						</div>
 					</div>
 					<div className='flex items-center justify-center w-full  absolute bottom-0 left-1/2 -translate-x-1/2 overflow-hidden  '>
@@ -91,7 +96,7 @@ export default function Home() {
 							href='/projects'
 						>
 							{' '}
-							Projects <VscArrowRight className='group-hover:translate-x-1 ml-1 duration-300' />
+							{t('projects')} <VscArrowRight className='group-hover:translate-x-1 ml-1 duration-300' />
 						</Link>
 						<motion.div
 							initial={{ y: 200, opacity: 0 }}
@@ -115,7 +120,7 @@ export default function Home() {
 								className=' flex items-center text-xl font-medium   text-dark underline decoration-primary hover:translate-y-1 duration-300 '
 								href='mailto:nowak.sebastian99@wp.pl  '
 							>
-								<MailIcon className=' mr-2 w-8' /> Write to me!{' '}
+								<MailIcon className=' mr-2 w-8' />{t('writetome')}
 							</Link>
 						</div>
 					</div>
@@ -128,7 +133,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
 	return {
 		props: {
-			...(await serverSideTranslations(locale, ['about'])),
+			... (await serverSideTranslations(locale, ['about'])),
 		},
 	};
 }
