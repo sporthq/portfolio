@@ -34,9 +34,9 @@ const about = () => {
 				/>
 			</Head>
 			<main className='flex w-full flex-col items-center justify-center '>
-			<Layout className='py-16 px-14 md:py-8 md:px-4 '>
+			<Layout className='py-16 px-14 md:py-12 md:px-4 '>
 					<AnimatedText
-						className={`text-8xl text-center font-semibold mb-32 2xl:text-7xl  lg:text-6xl sm:text-5xl   md:mb-16`}
+						className={`text-8xl text-center font-semibold mb-32 2xl:text-7xl  lg:text-6xl sm:text-5xl   md:mb-18`}
 						text="Hi there! I'm Sebastian. Welcome to my portfolio page."
 						fromBottom
 					/>
