@@ -5,51 +5,56 @@ import profilePic from '../../public/images/profile/developer-pic2.png';
 import AnimatedText from '@/components/AnimatedText';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import {  MailIcon } from '@/components/Icons';
+import { MailIcon } from '@/components/Icons';
 import ParticlesContainer from '@/components/ParticlesContainer';
 import { VscArrowRight } from 'react-icons/vsc';
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-export default function Home() {
+import { useTranslation } from 'react-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-	const {locale} = useRouter()
+export default function Home() {
+	const { t } = useTranslation('about');
+
+	const { locale } = useRouter();
 	const [profileImgHeight, setProfilImageHeight] = useState('');
+
 	useEffect(() => {
 		const updateElementSize = () => {
-		  const windowHeight = window.innerHeight;
-		  const windowWidth = window.innerWidth;
-		  let newHeight;
-	  
-		  if (windowWidth < 479 && windowHeight < 1000) {
-			newHeight = 80;
-		  } else if (windowHeight < 690) {
-			newHeight = 17;
-		  } else if (windowHeight < 730) {
-			newHeight = 20;
-		  } else if (windowHeight < 780) {
-			newHeight = 28;
-		  } else if (windowHeight < 880) {
-			newHeight = 26;
-		  } else if (windowHeight < 900) {
-			newHeight = 24;
-		  } else {
-			// Domyślna wartość, gdy nie spełniono żadnego warunku
-			newHeight = 27; // Możesz ustawić tutaj dowolną wartość jako domyślną
-		  }
-	  
-		  setProfilImageHeight(newHeight);
+			const windowHeight = window.innerHeight;
+			const windowWidth = window.innerWidth;
+			let newHeight;
+
+			if (windowWidth < 479 && windowHeight < 1000) {
+				newHeight = 80;
+			} else if (windowHeight < 690) {
+				newHeight = 17;
+			} else if (windowHeight < 730) {
+				newHeight = 20;
+			} else if (windowHeight < 780) {
+				newHeight = 28;
+			} else if (windowHeight < 880) {
+				newHeight = 26;
+			} else if (windowHeight < 900) {
+				newHeight = 24;
+			} else {
+				// Domyślna wartość, gdy nie spełniono żadnego warunku
+				newHeight = 27; // Możesz ustawić tutaj dowolną wartość jako domyślną
+			}
+
+			setProfilImageHeight(newHeight);
 		};
-	  
+
 		// Wywołaj funkcję aktualizującą szerokość elementu zaraz po załadowaniu strony i przy każdej zmianie rozmiaru okna
 		updateElementSize();
 		window.addEventListener('resize', updateElementSize);
-	  
+
 		return () => {
-		  // Usuń poprzedniego słuchacza przed dodaniem nowego
-		  window.removeEventListener('resize', updateElementSize);
+			// Usuń poprzedniego słuchacza przed dodaniem nowego
+			window.removeEventListener('resize', updateElementSize);
 		};
-	  }, []);
-	
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -60,10 +65,10 @@ export default function Home() {
 				/>
 			</Head>
 			<div className='flex   text-dark w-full  min-h-screen items-start lg:items-center  xs:items-start justify-center relative  '>
-				<Layout className='pt-8 items-center justify-center w-full' >
+				<Layout className='pt-8 items-center justify-center w-full'>
 					<div className='text-center w-full  flex  flex-col items-center relative  xs:pb-56 sm:pb-42 '>
 						<h1 className='text-8xl font-semibold  py-2 relative inline-block lg:text-7xl'>
-							{locale + 'Hello!'}
+							{t('hello')}
 							<motion.span
 								initial={{ width: 0 }}
 								animate={{ width: '100%' }}
@@ -91,21 +96,18 @@ export default function Home() {
 						<motion.div
 							initial={{ y: 200, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
-							
 							exit={{ y: 200 }}
 							transition={{ duration: 1, easy: 'easyInOut' }}
 							className=''
-														style={{ 
-															
-															width: `${profileImgHeight}vw` }}
+							style={{
+								width: `${profileImgHeight}vw`,
+							}}
 						>
 							<Image
 								src={profilePic}
-							
 								alt='Developer while work'
 								className={` lg:hidden w-[100%]  flex  xs:flex xs:w-[90vw] `}
 								priority
-						
 							/>
 						</motion.div>
 						<div className='lg:hidden'>
@@ -121,4 +123,12 @@ export default function Home() {
 			</div>
 		</>
 	);
+}
+
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['about'])),
+		},
+	};
 }

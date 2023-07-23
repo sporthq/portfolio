@@ -1,5 +1,6 @@
 import { motion, useScroll } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 export function useMediaQuery(query) {
 	const [matches, setMatches] = useState(false);
 
@@ -143,6 +144,8 @@ const RightBox = ({ company, date, title, author, colorIcon = 'bg-purple-600', c
 
 const Education = () => {
 	const ref = useRef(null);
+	const {t} = useTranslation('about')
+
 	const { scrollYProgress } = useScroll({
 		target: ref,
 		offset: ['70px end', 'center start'],
@@ -150,7 +153,7 @@ const Education = () => {
 
 	return (
 		<>
-			<h2 className='text-8xl text-center py-36 lg:text-6xl  sm:text-5xl   lg:py-28 xd:py-8 font-semibold'>Education</h2>
+			<h2 className='text-8xl text-center py-36 lg:text-6xl  sm:text-5xl   lg:py-28 xd:py-8 font-semibold'>{t('education')}</h2>
 
 			<div ref={ref} className='relative grid grid-cols-9 gap-6 md:gap-4 md:grid-cols-6  mb-16 '>
 				<motion.div

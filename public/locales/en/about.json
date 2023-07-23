@@ -5,7 +5,11 @@
     "aboutme": "About Me",
     "aboutmep1": "For over 2 years, I have been learning programming. My main interests revolve around MERN technologies (MongoDB, Express.js, React.js, Node.js), which I actively work with in my daily job. During this time, I have gained a solid foundation in these technologies and continuously expand my knowledge.",
     "aboutmep2": "My main goal is continuous development of my knowledge and programming skills. I plan to further specialize in the MERN stack and explore new technologies that will enable me to create innovative solutions. Additionally, I would like to actively engage in the programming community, share knowledge, and collaborate with other technology enthusiasts.",
-    "education": "Education"
+    "education": "Education",
+    "send": "Send",
+    "tome": "to me!",
+    "hello": "Hello!"
+
 
   }
   

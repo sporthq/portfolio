@@ -98,14 +98,14 @@ const NavBar = () => {
 					<div className='min-w-[70vw]  flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-dark/90 rounded-lg backdrop-blur-md py-32 text-light  '>
 						<Link href='mailto:nowak.sebastian99@wp.pl'>
 							<button className='absolute right-[15px] bottom-[15px] flex justify-center items-center text-base'>
-								Send <MailIcon className='w-4 mx-2' /> to me!
+								{t('send')} <MailIcon className='w-4 mx-2' /> {t('tome')}
 							</button>
 						</Link>
 						<nav className='flex flex-col items-center jusitify-center '>
 							<CustomMobileLink href='/' title='Home' className=' ' toggle={handleClick} />
-							<CustomMobileLink href='/about' title='About' className='' toggle={handleClick} />
+							<CustomMobileLink href='/about' title={t('about')} className='' toggle={handleClick} />
 
-							<CustomMobileLink href='/projects' title='Projects' className=' ' toggle={handleClick} />
+							<CustomMobileLink href='/projects' title={t('projects')} className=' ' toggle={handleClick} />
 
 							<nav className=' flex items-center justify-center mt-6 shadow-xl  		  '>
 								<motion.a
@@ -148,8 +148,7 @@ const NavBar = () => {
 						<CustomLink href='/about' title={t('about')} className='mx-4 ' />
 						{router.asPath === '/' ? '' : <CustomLink href='/projects' title={t('projects')} className='mx-4' />}
 
-						{/* <CustomLink href='/contact' title='Contact' className='ml-4' /> */}
-						{/* <h1>{t('hello')}</h1> */}
+						
 					</nav>
 				</div>
 
