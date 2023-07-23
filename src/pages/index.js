@@ -9,8 +9,10 @@ import {  MailIcon } from '@/components/Icons';
 import ParticlesContainer from '@/components/ParticlesContainer';
 import { VscArrowRight } from 'react-icons/vsc';
 import {useState, useEffect} from 'react'
+import { useRouter } from 'next/router';
 export default function Home() {
-	const [responsiveWidth, setResponsiveWidth] = useState(0);
+
+	const {locale} = useRouter()
 	const [profileImgHeight, setProfilImageHeight] = useState('');
 	useEffect(() => {
 		const updateElementSize = () => {
@@ -61,7 +63,7 @@ export default function Home() {
 				<Layout className='pt-8 items-center justify-center w-full' >
 					<div className='text-center w-full  flex  flex-col items-center relative  xs:pb-56 sm:pb-42 '>
 						<h1 className='text-8xl font-semibold  py-2 relative inline-block lg:text-7xl'>
-							Hello!
+							{locale + 'Hello!'}
 							<motion.span
 								initial={{ width: 0 }}
 								animate={{ width: '100%' }}

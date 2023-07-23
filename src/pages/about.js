@@ -23,7 +23,13 @@ import {
 } from '@/components/Icons';
 import Education from '../components/Education';
 
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+
 const about = () => {
+	const { locale } = useRouter();
+	const {t} = useTranslation('about')
 	return (
 		<>
 			<Head>
@@ -34,26 +40,26 @@ const about = () => {
 				/>
 			</Head>
 			<main className='flex w-full flex-col items-center justify-center '>
-			<Layout className='py-16 px-14 md:py-12 md:px-4 '>
+				{/* <h1>{translate('projects')}</h1> */}
+				{/* <div>
+      <p>{t('hello')}</p>
+      <p>{t('projects')}</p>
+    </div> */}
+				<Layout className='py-16 px-14 md:py-12 md:px-4 '>
 					<AnimatedText
 						className={`text-8xl text-center font-semibold mb-32 2xl:text-7xl  lg:text-6xl sm:text-5xl   sm:mb-20`}
-						text="Hi there! I'm Sebastian. Welcome to my portfolio page."
+						text={t('welcome')}
 						fromBottom
 					/>
 					<div className='grid w-full  grid-cols-9 gap-16 2xl:grid-cols-6 2xl:gap-x-20 2xl:gap-y-10 md:grid-cols-3 '>
 						<div className='col-span-3 flex flex-col items-start justify-start 2xl:col-span-6  md:col-span-3   '>
-							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75 2xl:text-xl md:text-lg'>About Me</h2>
+							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75 2xl:text-xl md:text-lg'>{t('aboutme')}</h2>
 							<p className='font-medium 2xl:text:lg md:text-sm'>
-								I&apos;ve been programming for nearly 2 years and I&apos;m extremely passionate about this field.My main
-								interests revolve around MERN technologies (MongoDB, Express.js, React.js, Node.js), which I actively
-								work with in my daily job. Over this time, I&apos;ve gained a solid foundation in these technologies and
-								I&apos;m constantly expanding my knowledge
+								{t('aboutmep1')}
 							</p>
 							<p className='my-4 font-medium'>
-								My main goal is to continuously grow my knowledge and programming skills. I aim to further specialize in
-								the MERN stack and explore new technologies that enable me to build innovative solutions. Additionally,
-								I&apos;d like to actively engage with the programming community, share knowledge, and collaborate with
-								fellow technology enthusiasts.
+							{t('aboutmep2')}
+
 							</p>
 						</div>
 						<div className='w-full col-span-3 flex justify-center items-center 2xl:order-2 md:order-1'>
@@ -64,34 +70,33 @@ const about = () => {
 									alt='Sebastian Nowak'
 									className=' w-auto max-h-[500px] self:center  lg:h-auto object-contain  border-2 border-solid border-dark  rounded-2xl md:min-h-[280px] '
 									priority
-							
 								/>
 							</div>
 						</div>
 						<div className='w-full col-span-3 flex flex-col items-center justify-center  2xl:order-1  md:order-2 md:mt-8'>
 							<div>
-							<h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Technology</h2>
-							<div className='w-full flex mt-4'>
-								<IconHtml5 className='w-16 xs:w-12 mr-1 hover:animate-bounceicon  duration-300' />
-								<CSSIcon className='w-16 mx-1 xs:w-12  hover:animate-bounceicon duration-300' />
-								<JSIcon className='w-16 ml-1 xs:w-12  hover:animate-bounceicon duration-300' />
-								<ReactIcon className='w-16 mx-1 xs:w-12   hover:animate-bounceicon duration-300' />
-								<NextIcon className='w-16 mx-1  xs:w-12  hover:animate-bounceicon duration-300' />
-							</div>
-							<div className='w-full flex mt-4'>
-								<NodeIcon className='w-16 mr-1  xs:w-12  hover:animate-bounceicon duration-300' />
-								<MongoDBIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<ExpressIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
-								<TailwindIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
-								<BootstrapIcon className='w-16 xs:w-12  ml-1  hover:animate-bounceicon duration-300' />
-							</div>
-							<div className='w-full flex mt-4'>
-								<ReduxIcon className='w-16 xs:w-12  mr-1  hover:animate-bounceicon duration-300' />
-								<RouterIcon className='w-16  xs:w-12 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<FrameMotionIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<IconChakraui className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-								<GitHubIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
-							</div>
+								<h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Technology</h2>
+								<div className='w-full flex mt-4'>
+									<IconHtml5 className='w-16 xs:w-12 mr-1 hover:animate-bounceicon  duration-300' />
+									<CSSIcon className='w-16 mx-1 xs:w-12  hover:animate-bounceicon duration-300' />
+									<JSIcon className='w-16 ml-1 xs:w-12  hover:animate-bounceicon duration-300' />
+									<ReactIcon className='w-16 mx-1 xs:w-12   hover:animate-bounceicon duration-300' />
+									<NextIcon className='w-16 mx-1  xs:w-12  hover:animate-bounceicon duration-300' />
+								</div>
+								<div className='w-full flex mt-4'>
+									<NodeIcon className='w-16 mr-1  xs:w-12  hover:animate-bounceicon duration-300' />
+									<MongoDBIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+									<ExpressIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
+									<TailwindIcon className='w-16 xs:w-12  mx-1  hover:animate-bounceicon duration-300' />
+									<BootstrapIcon className='w-16 xs:w-12  ml-1  hover:animate-bounceicon duration-300' />
+								</div>
+								<div className='w-full flex mt-4'>
+									<ReduxIcon className='w-16 xs:w-12  mr-1  hover:animate-bounceicon duration-300' />
+									<RouterIcon className='w-16  xs:w-12 h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+									<FrameMotionIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+									<IconChakraui className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+									<GitHubIcon className='w-16 xs:w-12  h-[80px] mx-1  hover:animate-bounceicon duration-300' />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -102,4 +107,11 @@ const about = () => {
 	);
 };
 
+export async function getStaticProps({locale}){
+	return {
+		props: {
+			... (await serverSideTranslations(locale, ['about']))
+		},
+	}
+}
 export default about;
