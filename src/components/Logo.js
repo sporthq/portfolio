@@ -11,7 +11,7 @@ const Logo = () => {
 			<div className='relative overflow:hidden'>
 			
 
-				<motion.div className=' flex items-center justify-center mt-2 bg-blue-200  p-[0]  '>
+				<motion.div className=' flex items-center justify-center mt-2  p-[0]  '>
 					<MotionLink
 						href='/'
 						className=' w-16 h-16  bg-dark  text-white p-[42px]  flex items-center  justify-center rounded-full -rotate-[5deg] text-4xl font-bold border-2 border-solid border-transparent hover:rotate-0 easy duration-300 hover:bg-light hover:text-dark hover:border-dark lg:p-[32px] md:p-[24px] '
