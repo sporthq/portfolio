@@ -61,7 +61,7 @@ const projects = () => {
 					fromBottom
 				/>
 
-				<div className='mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 md:gap-y-16 md:items-center'>
+				<div className='mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24  md:items-center'>
 					<div className='col-start-2 col-end-4 md:col-span-4 flex justify-center translate-x-3 '>
 						<WebProject
 							image={projectCasting}
