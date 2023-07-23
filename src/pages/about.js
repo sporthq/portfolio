@@ -27,7 +27,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 
-const about = () => {
+const About = () => {
 	const { locale } = useRouter();
 	const {t} = useTranslation('about')
 	return (
@@ -114,4 +114,4 @@ export async function getStaticProps({locale}){
 		},
 	}
 }
-export default about;
+export default About;
