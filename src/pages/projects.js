@@ -17,12 +17,12 @@ const projects = () => {
 				<div className='flex items-center justify-center relative flex-col  '>
 					<Image
 						priority
-						sizes='
-							(max-width: 768px) 100vw,
-							(max-width: 1200px) 100vw,
-							50vw
-							'
-						className='w-[90%] '
+						// sizes='
+						// 	(max-width: 768px) 100vw,
+						// 	(max-width: 1200px) 100vw,
+						// 	50vw
+						// 	'
+						className=''
 						src={image}
 						alt={alt}
 					/>
@@ -56,13 +56,13 @@ const projects = () => {
 			<main className='w-full mb-16 flex flex-col items-center justify-center'>
 				<Layout className='' />
 				<AnimatedText
-					className='text-8xl  lg:text-4xl text-center font-semibold mb-24 py-16'
+					className='text-8xl 2xl:text-7xl  lg:text-6xl sm:text-5xl   md:mb-16 xs:mb-8 text-center font-semibold mb-24 py-16'
 					text='Discover my projects!'
 					fromBottom
 				/>
 
-				<div className='mx-4 grid grid-cols-4  gap-y-24 '>
-					<div className='col-span-2'>
+				<div className='mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 md:gap-y-16 md:items-center'>
+					<div className='col-start-2 col-end-4 md:col-span-4 flex justify-center translate-x-3 '>
 						<WebProject
 							image={projectCasting}
 							alt='Casting project page'
@@ -71,7 +71,10 @@ const projects = () => {
 						/>
 					</div>
 
-					<div className='col-span-2 '>
+					<div
+						className='col-start-2 col-end-4 flex justify-center translate-x-3
+					  '
+					>
 						<WebProject
 							image={projectForest}
 							alt='Forest project page'
@@ -79,7 +82,7 @@ const projects = () => {
 							gitLink='https://github.com/sporthq/forest'
 						/>
 					</div>
-					<div className='col-span-2 '>
+					<div className='col-start-2 col-end-4 md:col-span-4 flex justify-center translate-x-3  '>
 						<WebProject
 							image={projectMapty}
 							alt='Mapty project page'
@@ -87,7 +90,7 @@ const projects = () => {
 							gitLink='https://github.com/sporthq/mapty'
 						/>
 					</div>
-					<div className='col-span-2 '>
+					<div className='col-start-2 col-end-4 md:col-span-4 flex justify-center translate-x-3 '>
 						<WebProject
 							image={projectForkify}
 							alt='Forkify project page'
@@ -95,7 +98,7 @@ const projects = () => {
 							gitLink='https://github.com/sporthq/forkify'
 						/>
 					</div>
-					<div className='col-span-4 col-start-2  '>
+					<div className='col-start-2 col-end-4 md:col-span-4 flex justify-center translate-x-3'>
 						<WebProject
 							image={projectBankist}
 							alt='Bankist project page'
