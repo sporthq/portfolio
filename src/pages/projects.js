@@ -23,14 +23,14 @@ const projects = () => {
 							src={image}
 							alt={alt}
 						/>
-						<div className='absolute w-[80%] h-[50px] left-[45%] -translate-x-[55%] top-0  bg-transparent -translate-y-[80%] opacity-0 md:opacity-1   group-hover:bg-transparent  group-hover:opacity-90 transition-all duration-600 rounded-2xl mb-[300px] '>
+						<div className='absolute w-[80%] h-[50px] left-[45%] -translate-x-[55%] top-0  bg-transparent -translate-y-[92%] opacity-0 md:opacity-100   group-hover:bg-transparent  group-hover:opacity-90 transition-all duration-600 rounded-2xl mb-[300px] '>
 							<div className=' flex items-center justify-around text-dark font-bold '>
 								<Link className='text-xl ml-4' href={hrefToPage} target='_blank'>
-									<span className='hover:underline duration-300'>Visit Project</span>
+									<span className='hover:underline duration-300 sm:text-lg xs:text-base'>Visit Project</span>
 								</Link>
 								<Link className='text-xl ' href={gitLink} target='_blank'>
 									<span>
-										<GitHubIcon className='w-10 h-8 mx-1  duration-300 hover:animate-bounceicon' />
+										<GitHubIcon className='w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon' />
 									</span>
 								</Link>
 							</div>
