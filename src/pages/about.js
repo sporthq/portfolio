@@ -57,7 +57,7 @@ const About = () => {
 							<p className='font-medium 2xl:text:lg md:text-sm'>
 								{t('aboutmep1')}
 							</p>
-							<p className='my-4 font-medium'>
+							<p className='my-4 font-medium md:text-sm'>
 							{t('aboutmep2')}
 
 							</p>
