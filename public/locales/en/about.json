@@ -1,19 +1,19 @@
 {
-    "about": "About",
-    "projects": "Projects",
-    "welcome": "Hi there! I'm Sebastian. Welcome to my portfolio page.",
-    "aboutme": "About Me",
-    "aboutmep1": "For over 2 years, I have been learning programming. My main interests revolve around MERN technologies (MongoDB, Express.js, React.js, Node.js), which I actively work with in my daily job. During this time, I have gained a solid foundation in these technologies and continuously expand my knowledge.",
-    "aboutmep2": "My main goal is continuous development of my knowledge and programming skills. I plan to further specialize in the MERN stack and explore new technologies that will enable me to create innovative solutions. Additionally, I would like to actively engage in the programming community, share knowledge, and collaborate with other technology enthusiasts.",
-    "education": "Education",
-    "send": "Send",
-    "tome": "to me!",
-    "Hello": "Hello!",
-    "writetome" : "Write to me!",
-    "helloHome": "As a full-stack developer with a passion for creating innovative web applications, I use MERN technologies (MongoDB, Express.js, React.js, Node.js) to deliver high-quality and responsive websites.",
-    "contentHome": "Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more.",
-    "maintekstproject":"Discover my projects!",
-    "visitproject": "Visit Project"
+  "about": "About",
+  "projects": "Projects",
+  "offer": "Offer",
 
-  }
-  
+  "welcome": "Hi there! I'm Sebastian. Welcome to my portfolio page.",
+  "aboutme": "About Me",
+  "aboutmep1": "For over 2 years, I have been learning programming. My main interests revolve around MERN technologies (MongoDB, Express.js, React.js, Node.js), which I actively work with in my daily job. During this time, I have gained a solid foundation in these technologies and continuously expand my knowledge.",
+  "aboutmep2": "My main goal is continuous development of my knowledge and programming skills. I plan to further specialize in the MERN stack and explore new technologies that will enable me to create innovative solutions. Additionally, I would like to actively engage in the programming community, share knowledge, and collaborate with other technology enthusiasts.",
+  "education": "Education",
+  "send": "Send",
+  "tome": "to me!",
+  "Hello": "Hello!",
+  "writetome": "Write to me!",
+  "helloHome": "As a full-stack developer with a passion for creating innovative web applications, I use MERN technologies (MongoDB, Express.js, React.js, Node.js) to deliver high-quality and responsive websites.",
+  "contentHome": "Welcome to Sebastian Nowak portfolio page featuring a collection of my web development and graphic design projects. Explore my skills in creating captivating websites, stunning graphics, and more.",
+  "maintekstproject": "Discover my projects!",
+  "visitproject": "Visit Project"
+}

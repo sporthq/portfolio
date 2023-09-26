@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { FacebookProvider, CustomChat } from 'react-facebook';
+import { FacebookProvider, CustomChat } from "react-facebook";
 
-function FacebookMsg(){
- return(
+function FacebookMsg() {
+  return (
     <FacebookProvider appId="1033004211022124" chatSupport>
-       <CustomChat pageId="108479388986594" minimized={'true'}/>
-      </FacebookProvider>   
- )
+      <CustomChat pageId="108479388986594" minimized={"true"} />
+    </FacebookProvider>
+  );
 }
 
-export default FacebookMsg
+export default FacebookMsg;

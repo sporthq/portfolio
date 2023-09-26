@@ -1,24 +1,18 @@
 {
-    "about": "O mnie",
-    "projects": "Projekty",
-    "welcome": "Cześć! jestem Sebastian. Zapraszam do mojego portfolio.",
-    "aboutme": "O mnie",
-    "aboutmep1": "Od ponad 2 lat uczę się programowania. Moje główne zainteresowania koncentrują się wokół technologii MERN (MongoDB, Express.js, React.js, Node.js), z którymi aktywnie pracuję w codziennej pracy. Przez ten czas zdobyłem solidne podstawy w tych technologiach i nieustannie poszerzam swoją wiedzę.",
-    "aboutmep2": "Moim głównym celem jest ciągły rozwój mojej wiedzy i umiejętności programistycznych. Planuję dalej specjalizować się w stosie MERN oraz eksplorować nowe technologie, które umożliwią mi tworzenie innowacyjnych rozwiązań. Dodatkowo, chciałbym aktywnie zaangażować się w społeczność programistyczną, dzielić się wiedzą i współpracować z innymi entuzjastami technologii.",
-    "education": "Edukacja",
-    "send": "Wyślij",
-    "tome": "do mnie!",
-    "Hello": "Cześć!",
-    "writetome" : "Napisz do mnie!",
-    "helloHome": "Jako programista full-stack z pasją  tworzę innowacyjne aplikacje internetowe, wykorzystuję technologie MERN (MongoDB, Express.js, React.js, Node.js), aby dostarczać wysokiej jakości projekty.",
-    "contentHome": "Witaj na mojej stronie portfolio, na której znajdziesz  moje projektów z zakresu tworzenia stron internetowych. Odkryj moje umiejętności w tworzeniu stron internetowych. ",
-    "maintekstproject":"Zobacz moje projekty!",
-    "visitproject": "Zobacz projekt"
-
-
-
-
-
-
-  }
-  
+  "about": "O mnie",
+  "projects": "Projekty",
+  "offer": "Oferta",
+  "welcome": "Cześć! jestem Sebastian. Zapraszam do mojego portfolio.",
+  "aboutme": "O mnie",
+  "aboutmep1": "Od ponad 2 lat uczę się programowania. Moje główne zainteresowania koncentrują się wokół technologii MERN (MongoDB, Express.js, React.js, Node.js), z którymi aktywnie pracuję w codziennej pracy. Przez ten czas zdobyłem solidne podstawy w tych technologiach i nieustannie poszerzam swoją wiedzę.",
+  "aboutmep2": "Moim głównym celem jest ciągły rozwój mojej wiedzy i umiejętności programistycznych. Planuję dalej specjalizować się w stosie MERN oraz eksplorować nowe technologie, które umożliwią mi tworzenie innowacyjnych rozwiązań. Dodatkowo, chciałbym aktywnie zaangażować się w społeczność programistyczną, dzielić się wiedzą i współpracować z innymi entuzjastami technologii.",
+  "education": "Edukacja",
+  "send": "Wyślij",
+  "tome": "do mnie!",
+  "Hello": "Cześć!",
+  "writetome": "Napisz do mnie!",
+  "helloHome": "Jako programista full-stack z pasją  tworzę innowacyjne aplikacje internetowe, wykorzystuję technologie MERN (MongoDB, Express.js, React.js, Node.js), aby dostarczać wysokiej jakości projekty.",
+  "contentHome": "Witaj na mojej stronie portfolio, na której znajdziesz  moje projektów z zakresu tworzenia stron internetowych. Odkryj moje umiejętności w tworzeniu stron internetowych. ",
+  "maintekstproject": "Zobacz moje projekty!",
+  "visitproject": "Zobacz projekt"
+}
