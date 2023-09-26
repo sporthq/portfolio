@@ -103,14 +103,14 @@ const Projects = () => {
             gitLink="https://github.com/sporthq/forkify"
           />
 
-          <div className=" col-start-2 col-end-4 ">
+       
             <WebProject
               image={projectBankist}
               alt="Strona projektu Bankist"
               hrefToPage="https://bankist-71x0.onrender.com/"
               gitLink="https://github.com/sporthq/bankist"
             />
-          </div>
+      
         </div>
       </main>
     </>
