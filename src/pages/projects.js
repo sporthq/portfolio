@@ -78,7 +78,7 @@ const Projects = () => {
           <WebProject
             image={projectCasting}
             alt="Casting project page"
-            hrefToPage="https://casting-appv1.onrender.com/"
+            hrefToPage="https://castingi.com.pl"
             gitLink="https://github.com/sporthq/castingmern"
           />
 
