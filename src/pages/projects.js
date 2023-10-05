@@ -70,16 +70,16 @@ const Projects = () => {
 
         <div className="mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center">
           <WebProject
-            image={projectReactQuiz}
-            alt="Casting project page"
-            hrefToPage="https://react-quiz1.vercel.app/"
-            gitLink="https://github.com/sporthq/react-quiz1"
-          />
-          <WebProject
             image={projectCasting}
             alt="Casting project page"
             hrefToPage="https://castingi.com.pl"
             gitLink="https://github.com/sporthq/castingmern"
+          />
+          <WebProject
+            image={projectReactQuiz}
+            alt="Casting project page"
+            hrefToPage="https://react-quiz1.vercel.app/"
+            gitLink="https://github.com/sporthq/react-quiz1"
           />
 
           <WebProject
@@ -103,14 +103,12 @@ const Projects = () => {
             gitLink="https://github.com/sporthq/forkify"
           />
 
-       
-            <WebProject
-              image={projectBankist}
-              alt="Strona projektu Bankist"
-              hrefToPage="https://bankist-71x0.onrender.com/"
-              gitLink="https://github.com/sporthq/bankist"
-            />
-      
+          <WebProject
+            image={projectBankist}
+            alt="Strona projektu Bankist"
+            hrefToPage="https://bankist-71x0.onrender.com/"
+            gitLink="https://github.com/sporthq/bankist"
+          />
         </div>
       </main>
     </>
