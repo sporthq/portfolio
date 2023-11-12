@@ -167,15 +167,13 @@ const NavBar = () => {
             <CustomLink href="/" title="Home" className="mr-4 " />
             <CustomLink href="/about" title={t("about")} className="mx-4 " />
 
-            {router.asPath === "/" ? (
-              ""
-            ) : (
+           
               <CustomLink
                 href="/projects"
                 title={t("projects")}
                 className="mx-4"
               />
-            )}
+            
           </nav>
         </div>
 

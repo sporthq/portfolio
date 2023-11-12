@@ -80,7 +80,7 @@ export default function Home() {
             <ParticlesContainer />
             <div className="flex flex-col items-center self-center  mb-32">
               <AnimatedText
-                className="text-3xl max-w-4xl mt-12 mb-4  md:text-xl lg:text-2xl md:px-2"
+                className="text-3xl max-w-7xl  mt-12 mb-4  md:text-xl lg:text-2xl md:px-2"
                 text={t("helloHome")}
               />
             </div>

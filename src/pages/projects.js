@@ -7,6 +7,7 @@ import projectForkify from "../../public/images/projects/forkify-removebg.png";
 import projectMapty from "../../public/images/projects/mapty-removebg.png";
 import projectBankist from "../../public/images/projects/bankist-removebg.png";
 import projectReactQuiz from "../../public/images/projects/react-quiz-removebg.png";
+import salaZakatek from "../../public/images/projects/sala-zak-removebg-preview.png";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -69,6 +70,12 @@ const Projects = () => {
         />
 
         <div className="mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center">
+          <WebProject
+            image={salaZakatek}
+            alt="Casting project page"
+            hrefToPage="https://salazakatek.pl"
+            gitLink="https://github.com/sporthq/"
+          />
           <WebProject
             image={projectCasting}
             alt="Casting project page"
