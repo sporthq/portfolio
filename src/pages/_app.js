@@ -24,9 +24,9 @@ function App({ Component, pageProps }) {
         <NavBar className="order-1"></NavBar>
         <Component {...pageProps} />
         {/* <footer className="border border-t-4 p-3 text-center"><p>Contact with me!</p></footer> */}
-        <Footer className="order-3 mb-auto" />
         <FacebookMsg />
       </main>
+        <Footer className="order-3 mb-auto" /> 
     </>
   );
 }
