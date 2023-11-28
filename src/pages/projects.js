@@ -52,12 +52,12 @@ const Projects = () => {
             </div>
             <div className="mt-8 -translate-x-10 sm:-translate-x-0">
               <p className="font-semibold mb-2 text-sm">Technology:</p>
-              <ul className="flex items-center gap-1 -translate-x-2">
+              {/* <ul className="flex items-center gap-1 -translate-x-2">
                 {icons.map((icon) => {
                   console.log(icon);
                   return <li key={icon.id}>{icon.icon}</li>;
                 })}
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ const Projects = () => {
         />
 
         <div className="mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center">
-          {/* <WebProject
+          <WebProject
             image={salaZakatek}
             alt="Casting project page"
             hrefToPage="https://salazakatek.pl"
@@ -111,7 +111,7 @@ const Projects = () => {
                  duration-300 "
               />,
             ]}
-          /> */}
+          />
           {/* <WebProject
             image={projectCasting}
             alt="Casting project page"
