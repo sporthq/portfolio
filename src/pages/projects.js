@@ -3,9 +3,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import projectCasting from "../../public/images/projects/castings-removebg3.png";
 import projectForest from "../../public/images/projects/forest-removebg.png";
-import projectForkify from "../../public/images/projects/forkify-removebg.png";
-import projectMapty from "../../public/images/projects/mapty-removebg.png";
-import projectBankist from "../../public/images/projects/bankist-removebg.png";
+
 import projectReactQuiz from "../../public/images/projects/react-quiz-removebg.png";
 import salaZakatek from "../../public/images/projects/sala-zak-removebg-preview.png";
 
