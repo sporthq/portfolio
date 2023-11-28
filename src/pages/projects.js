@@ -121,7 +121,7 @@ const Projects = () => {
                 id: 1,
                 icon: (
                   <IconHtml5
-                    // key="html-icon"
+                    key={1239303}
                     className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
                   />
                 ),
@@ -130,7 +130,7 @@ const Projects = () => {
                 id: 2,
                 icon: (
                   <CSSIcon
-                    // key="css-icon"
+                    key={3223232323}
                     className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
                   />
                 ),
