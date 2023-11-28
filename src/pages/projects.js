@@ -87,7 +87,7 @@ const Projects = () => {
         />
 
         <div className="mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center">
-          <WebProject
+          {/* <WebProject
             image={salaZakatek}
             alt="Casting project page"
             hrefToPage="https://salazakatek.pl"
@@ -111,7 +111,7 @@ const Projects = () => {
                  duration-300 "
               />,
             ]}
-          />
+          /> */}
           {/* <WebProject
             image={projectCasting}
             alt="Casting project page"
