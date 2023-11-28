@@ -112,7 +112,7 @@ const Projects = () => {
               />,
             ]}
           /> */}
-          <WebProject
+          {/* <WebProject
             image={projectCasting}
             alt="Casting project page"
             hrefToPage="https://castingi.com.pl"
@@ -121,17 +121,19 @@ const Projects = () => {
               {
                 id: 1,
                 icon: (
-                  <div key={1239303}>
-                    <IconHtml5 className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon" />
-                  </div>
+                  <IconHtml5
+                    key={1239303}
+                    className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+                  />
                 ),
               },
               {
                 id: 2,
                 icon: (
-                  <div key={3223232323}>
-                    <CSSIcon className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon" />
-                  </div>
+                  <CSSIcon
+                    key={3223232323}
+                    className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+                  />
                 ),
               },
               // <JSIcon
@@ -155,7 +157,7 @@ const Projects = () => {
               //   className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
               // />,
             ]}
-          />
+          /> */}
           {/* <WebProject
             image={projectReactQuiz}
             alt="Casting project page"
