@@ -113,6 +113,7 @@ const Projects = () => {
           /> */}
           <WebProject
             image={projectCasting}
+            key={1001}
             alt="Casting project page"
             hrefToPage="https://castingi.com.pl"
             gitLink="https://github.com/sporthq/castingmern"
