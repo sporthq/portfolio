@@ -54,7 +54,7 @@ const Projects = () => {
               <p className="font-semibold mb-2 text-sm">Technology:</p>
               <ul className="flex items-center gap-1 -translate-x-2">
                 {icons.map((icon) => (
-                  <li key={icon.id}>{icon.icon}</li>
+                  <li key={icon.icon.key}>{icon.icon}</li>
                 ))}
               </ul>
             </div>
