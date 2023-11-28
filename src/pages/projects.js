@@ -53,9 +53,10 @@ const Projects = () => {
             <div className="mt-8 -translate-x-10 sm:-translate-x-0">
               <p className="font-semibold mb-2 text-sm">Technology:</p>
               <ul className="flex items-center gap-1 -translate-x-2">
-                {icons.map((icon) => (
-                  <li key={icon.id}>{icon.icon}</li>
-                ))}
+                {icons.map((icon) => {
+                  console.log(icon);
+                  return <li key={icon.id}>{icon.icon}</li>;
+                })}
               </ul>
             </div>
           </div>
@@ -113,7 +114,6 @@ const Projects = () => {
           /> */}
           <WebProject
             image={projectCasting}
-            key={1001}
             alt="Casting project page"
             hrefToPage="https://castingi.com.pl"
             gitLink="https://github.com/sporthq/castingmern"
@@ -121,19 +121,17 @@ const Projects = () => {
               {
                 id: 1,
                 icon: (
-                  <IconHtml5
-                    key={1239303}
-                    className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
-                  />
+                  <div key={1239303}>
+                    <IconHtml5 className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon" />
+                  </div>
                 ),
               },
               {
                 id: 2,
                 icon: (
-                  <CSSIcon
-                    key={3223232323}
-                    className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
-                  />
+                  <div key={3223232323}>
+                    <CSSIcon className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon" />
+                  </div>
                 ),
               },
               // <JSIcon
