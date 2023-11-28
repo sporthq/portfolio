@@ -54,7 +54,7 @@ const Projects = () => {
               <p className="font-semibold mb-2 text-sm">Technology:</p>
               <ul className="flex items-center gap-1 -translate-x-2">
                 {icons.map((icon) => (
-                  <li key={icon.icon.key}>{icon.icon}</li>
+                  <li key={icon.id}>{icon.icon}</li>
                 ))}
               </ul>
             </div>
@@ -121,7 +121,7 @@ const Projects = () => {
                 id: 1,
                 icon: (
                   <IconHtml5
-                    key="html-icon"
+                    // key="html-icon"
                     className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
                   />
                 ),
@@ -130,7 +130,7 @@ const Projects = () => {
                 id: 2,
                 icon: (
                   <CSSIcon
-                    key="css-icon"
+                    // key="css-icon"
                     className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
                   />
                 ),
