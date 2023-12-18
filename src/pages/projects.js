@@ -91,7 +91,7 @@ const Projects = () => {
           <WebProject
             image={salaZakatek}
             alt="Casting project page"
-            hrefToPage="https://salazakatek.pl"
+            hrefToPage="https://www.salazakatek.com.pl"
             gitLink="https://github.com/sporthq/"
             icons={[
               <IconHtml5
