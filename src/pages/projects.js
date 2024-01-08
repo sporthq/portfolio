@@ -8,6 +8,7 @@ import projectMapty from "../../public/images/projects/mapty-removebg.png";
 import projectBankist from "../../public/images/projects/bankist-removebg.png";
 import projectReactQuiz from "../../public/images/projects/react-quiz-removebg.png";
 import salaZakatek from "../../public/images/projects/sala-zak-removebg-preview.png";
+import BookingApp from '../../public/images/projects/books-app.png'
 
 import Image from "next/image";
 import Link from "next/link";
@@ -88,6 +89,39 @@ const Projects = () => {
         />
 
         <div className="mx-4 grid grid-cols-4 md:grid-cols-1 gap-y-24 gap-x-24 md:gap-x-16 sm:gap-x-0  justify-center items-center">
+          <WebProject
+            image={BookingApp}
+            alt="Books App project page"
+            hrefToPage="https://books-app-front.vercel.app"
+            gitLink="https://github.com/sporthq/books-app"
+            icons={[
+              <IconHtml5
+                key="html-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              <CSSIcon
+                key="css-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              <JSIcon
+                key="js-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              <ReactIcon
+                key="react-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              <MongoDBIcon
+                key="mongodb-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              <ExpressIcon
+                key="express-icon"
+                className="w-10 h-8 mx-1 sm:w-8 sm:h-6 duration-300 hover:animate-bounceicon"
+              />,
+              
+            ]}
+          />
           <WebProject
             image={salaZakatek}
             alt="Casting project page"
